@@ -1,0 +1,1422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>InsightHub - Analytics Blog</title>
+
+  <meta
+    name="description"
+    content="A demo blog website for practicing Google Analytics 4 and Google Tag Manager."
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- =====================================================
+       GOOGLE TAG MANAGER
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVZ67Q6Z');</script>
+<!-- End Google Tag Manager -->
+       ===================================================== -->
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- =====================================================
+       DATA LAYER
+       ===================================================== -->
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    dataLayer.push({
+      event: "practice_site_loaded",
+      site_name: "InsightHub",
+      practice_mode: true
+    });
+  </script>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+
+    <nav class="max-w-7xl mx-auto px-4 py-4">
+
+      <div class="flex justify-between items-center">
+
+        <a
+          href="#home"
+          class="text-2xl font-bold text-indigo-600"
+          data-nav="home"
+        >
+          InsightHub
+        </a>
+
+
+        <div class="hidden md:flex gap-8">
+
+          <a
+            href="#home"
+            class="nav-link hover:text-indigo-600"
+            data-nav="home"
+          >
+            Home
+          </a>
+
+          <a
+            href="#articles"
+            class="nav-link hover:text-indigo-600"
+            data-nav="articles"
+          >
+            Articles
+          </a>
+
+          <a
+            href="#about"
+            class="nav-link hover:text-indigo-600"
+            data-nav="about"
+          >
+            About
+          </a>
+
+          <a
+            href="#contact"
+            class="nav-link hover:text-indigo-600"
+            data-nav="contact"
+          >
+            Contact
+          </a>
+
+        </div>
+
+        <button
+          id="mobileMenuBtn"
+          class="md:hidden border px-3 py-2 rounded-lg"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </nav>
+
+
+    <!-- Mobile Menu -->
+
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden border-t bg-white p-4"
+    >
+
+      <div class="flex flex-col gap-4">
+
+        <a href="#home" class="nav-link">
+          Home
+        </a>
+
+        <a href="#articles" class="nav-link">
+          Articles
+        </a>
+
+        <a href="#about" class="nav-link">
+          About
+        </a>
+
+        <a href="#contact" class="nav-link">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       HERO SECTION
+       ===================================================== -->
+
+  <section
+    id="home"
+    class="bg-gradient-to-r from-indigo-700 to-purple-700 text-white"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center"
+    >
+
+      <div>
+
+        <span
+          class="inline-block bg-white/20 px-4 py-2 rounded-full text-sm mb-5"
+        >
+          Analytics • SEO • Technology
+        </span>
+
+        <h1
+          class="text-4xl md:text-6xl font-bold leading-tight"
+        >
+          Learn. Measure. Grow.
+        </h1>
+
+        <p
+          class="mt-6 text-lg text-indigo-100"
+        >
+          Practical articles about Google Analytics 4,
+          Google Tag Manager, SEO and digital marketing.
+        </p>
+
+
+        <div class="mt-8 flex gap-4 flex-wrap">
+
+          <a
+            href="#articles"
+            id="exploreBtn"
+            class="bg-white text-indigo-700 px-6 py-3 rounded-xl font-semibold"
+          >
+            Explore Articles
+          </a>
+
+
+          <button
+            id="heroSubscribeBtn"
+            class="border border-white px-6 py-3 rounded-xl font-semibold"
+          >
+            Subscribe Free
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Dashboard -->
+
+      <div
+        class="bg-white/10 p-6 rounded-3xl backdrop-blur"
+      >
+
+        <h3 class="text-xl font-bold mb-5">
+          Analytics Dashboard
+        </h3>
+
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <div class="bg-white/10 p-5 rounded-xl">
+
+            <p class="text-sm">
+              Page Views
+            </p>
+
+            <p class="text-3xl font-bold">
+              1,248
+            </p>
+
+          </div>
+
+
+          <div class="bg-white/10 p-5 rounded-xl">
+
+            <p class="text-sm">
+              Sessions
+            </p>
+
+            <p class="text-3xl font-bold">
+              486
+            </p>
+
+          </div>
+
+
+          <div class="bg-white/10 p-5 rounded-xl">
+
+            <p class="text-sm">
+              Engagement
+            </p>
+
+            <p class="text-3xl font-bold">
+              64%
+            </p>
+
+          </div>
+
+
+          <div class="bg-white/10 p-5 rounded-xl">
+
+            <p class="text-sm">
+              Conversions
+            </p>
+
+            <p class="text-3xl font-bold">
+              37
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ARTICLES
+       ===================================================== -->
+
+  <section
+    id="articles"
+    class="max-w-7xl mx-auto px-4 py-16"
+  >
+
+    <div class="mb-10">
+
+      <p class="text-indigo-600 font-semibold">
+        Latest Articles
+      </p>
+
+      <h2 class="text-3xl font-bold mt-2">
+        Learn Analytics
+      </h2>
+
+    </div>
+
+
+    <!-- Filter -->
+
+    <div class="flex flex-wrap gap-3 mb-8">
+
+      <button
+        class="filter-btn bg-indigo-600 text-white px-4 py-2 rounded-lg"
+        data-category="all"
+      >
+        All
+      </button>
+
+      <button
+        class="filter-btn border bg-white px-4 py-2 rounded-lg"
+        data-category="Analytics"
+      >
+        Analytics
+      </button>
+
+      <button
+        class="filter-btn border bg-white px-4 py-2 rounded-lg"
+        data-category="GTM"
+      >
+        GTM
+      </button>
+
+      <button
+        class="filter-btn border bg-white px-4 py-2 rounded-lg"
+        data-category="SEO"
+      >
+        SEO
+      </button>
+
+    </div>
+
+
+    <!-- Article Grid -->
+
+    <div
+      id="articleGrid"
+      class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+    ></div>
+
+  </section>
+
+
+  <!-- =====================================================
+       NEWSLETTER
+       ===================================================== -->
+
+  <section
+    id="newsletter"
+    class="bg-white border-y"
+  >
+
+    <div
+      class="max-w-3xl mx-auto text-center px-4 py-16"
+    >
+
+      <p class="text-indigo-600 font-semibold">
+        Newsletter
+      </p>
+
+      <h2 class="text-3xl font-bold mt-2">
+        Get Analytics Tips
+      </h2>
+
+      <p class="text-gray-600 mt-3">
+        Subscribe and practice form tracking with GA4 and GTM.
+      </p>
+
+
+      <form
+        id="newsletterForm"
+        class="mt-7 flex flex-col sm:flex-row gap-3"
+      >
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Enter your email"
+          class="flex-1 border rounded-xl px-4 py-3"
+        />
+
+        <button
+          type="submit"
+          class="bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold"
+        >
+          Subscribe
+        </button>
+
+      </form>
+
+
+      <p
+        id="newsletterMessage"
+        class="mt-4 hidden text-green-600 font-semibold"
+      >
+        Successfully subscribed!
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ABOUT
+       ===================================================== -->
+
+  <section
+    id="about"
+    class="max-w-7xl mx-auto px-4 py-16"
+  >
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+
+      <div>
+
+        <p class="text-indigo-600 font-semibold">
+          About
+        </p>
+
+        <h2 class="text-3xl font-bold mt-2">
+          GA4 & GTM Practice Website
+        </h2>
+
+        <p class="mt-5 text-gray-600 leading-7">
+
+          This website is designed as a sandbox for
+          learning Google Analytics 4 and Google Tag Manager.
+
+          You can practice events, conversions, dimensions,
+          metrics, forms, CTA clicks and internal search.
+
+        </p>
+
+
+        <button
+          id="downloadGuide"
+          class="mt-6 bg-gray-900 text-white px-6 py-3 rounded-xl"
+        >
+          Download Practice Guide
+        </button>
+
+      </div>
+
+
+      <div class="grid sm:grid-cols-2 gap-5">
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border">
+
+          <div class="text-3xl">
+            📊
+          </div>
+
+          <h3 class="font-bold mt-3">
+            GA4 Events
+          </h3>
+
+          <p class="text-sm text-gray-600 mt-2">
+            Practice custom events and parameters.
+          </p>
+
+        </div>
+
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border">
+
+          <div class="text-3xl">
+            🏷️
+          </div>
+
+          <h3 class="font-bold mt-3">
+            Google Tag Manager
+          </h3>
+
+          <p class="text-sm text-gray-600 mt-2">
+            Practice tags, triggers and variables.
+          </p>
+
+        </div>
+
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border">
+
+          <div class="text-3xl">
+            🔎
+          </div>
+
+          <h3 class="font-bold mt-3">
+            Search Tracking
+          </h3>
+
+          <p class="text-sm text-gray-600 mt-2">
+            Practice internal search tracking.
+          </p>
+
+        </div>
+
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border">
+
+          <div class="text-3xl">
+            🎯
+          </div>
+
+          <h3 class="font-bold mt-3">
+            Conversions
+          </h3>
+
+          <p class="text-sm text-gray-600 mt-2">
+            Practice lead and signup conversions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT
+       ===================================================== -->
+
+  <section
+    id="contact"
+    class="bg-gray-900 text-white"
+  >
+
+    <div
+      class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10"
+    >
+
+      <div>
+
+        <p class="text-indigo-400 font-semibold">
+          Contact
+        </p>
+
+        <h2 class="text-3xl font-bold mt-2">
+          Send a Test Message
+        </h2>
+
+        <p class="text-gray-400 mt-4">
+          Use this form to practice lead-generation tracking.
+        </p>
+
+      </div>
+
+
+      <form
+        id="contactForm"
+        class="space-y-4"
+      >
+
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Your Name"
+          class="w-full px-4 py-3 rounded-xl text-gray-900"
+        />
+
+
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Your Email"
+          class="w-full px-4 py-3 rounded-xl text-gray-900"
+        />
+
+
+        <textarea
+          name="message"
+          rows="5"
+          required
+          placeholder="Your Message"
+          class="w-full px-4 py-3 rounded-xl text-gray-900"
+        ></textarea>
+
+
+        <button
+          type="submit"
+          class="w-full bg-indigo-600 px-5 py-3 rounded-xl font-semibold"
+        >
+          Send Message
+        </button>
+
+
+        <p
+          id="contactMessage"
+          class="hidden text-green-400"
+        >
+          Message submitted successfully!
+        </p>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer
+    class="bg-black text-gray-400 text-center py-8"
+  >
+
+    <p>
+      © 2026 InsightHub — GA4 & GTM Practice Website
+    </p>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /*
+    =========================================================
+    HELPER FUNCTION
+    =========================================================
+    */
+
+    function sendEvent(eventName, parameters = {}) {
+
+      window.dataLayer = window.dataLayer || [];
+
+      window.dataLayer.push({
+
+        event: eventName,
+
+        ...parameters
+
+      });
+
+      console.log(
+        "GTM Event:",
+        eventName,
+        parameters
+      );
+
+    }
+
+
+    /*
+    =========================================================
+    ARTICLES DATA
+    =========================================================
+    */
+
+    const articles = [
+
+      {
+        id: 1,
+
+        title:
+          "GA4 Dimensions vs Metrics Explained",
+
+        category:
+          "Analytics",
+
+        time:
+          "5 min",
+
+        description:
+          "Learn the difference between dimensions and metrics in Google Analytics 4.",
+
+        image:
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+
+      },
+
+
+      {
+        id: 2,
+
+        title:
+          "Google Tag Manager for Beginners",
+
+        category:
+          "GTM",
+
+        time:
+          "7 min",
+
+        description:
+          "Learn tags, triggers, variables and dataLayer with practical examples.",
+
+        image:
+          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+
+      },
+
+
+      {
+        id: 3,
+
+        title:
+          "Internal Search Tracking in GA4",
+
+        category:
+          "Analytics",
+
+        time:
+          "6 min",
+
+        description:
+          "Learn how to track what visitors search for on your website.",
+
+        image:
+          "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80"
+
+      },
+
+
+      {
+        id: 4,
+
+        title:
+          "SEO Basics for Beginners",
+
+        category:
+          "SEO",
+
+        time:
+          "4 min",
+
+        description:
+          "Learn basic SEO concepts for a new website.",
+
+        image:
+          "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=900&q=80"
+
+      },
+
+
+      {
+        id: 5,
+
+        title:
+          "How to Track CTA Button Clicks",
+
+        category:
+          "GTM",
+
+        time:
+          "5 min",
+
+        description:
+          "Practice tracking CTA clicks using GTM and GA4.",
+
+        image:
+          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80"
+
+      },
+
+
+      {
+        id: 6,
+
+        title:
+          "Understanding Sessions in GA4",
+
+        category:
+          "Analytics",
+
+        time:
+          "5 min",
+
+        description:
+          "Understand sessions, users and engagement in GA4.",
+
+        image:
+          "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+
+      }
+
+    ];
+
+
+    /*
+    =========================================================
+    RENDER ARTICLES
+    =========================================================
+    */
+
+    const articleGrid =
+      document.getElementById("articleGrid");
+
+
+    function renderArticles(category = "all") {
+
+      let filteredArticles = articles;
+
+
+      if (category !== "all") {
+
+        filteredArticles =
+          articles.filter(
+            article =>
+              article.category === category
+          );
+
+      }
+
+
+      articleGrid.innerHTML =
+        filteredArticles.map(article => `
+
+          <article
+            class="bg-white rounded-2xl overflow-hidden shadow-sm border hover:shadow-lg transition"
+          >
+
+            <img
+              src="${article.image}"
+              alt="${article.title}"
+              class="w-full h-48 object-cover"
+            />
+
+
+            <div class="p-6">
+
+              <div class="flex justify-between items-center">
+
+                <span
+                  class="bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-xs font-semibold"
+                >
+                  ${article.category}
+                </span>
+
+                <span class="text-xs text-gray-500">
+                  ${article.time}
+                </span>
+
+              </div>
+
+
+              <h3
+                class="text-xl font-bold mt-4"
+              >
+                ${article.title}
+              </h3>
+
+
+              <p
+                class="text-gray-600 text-sm mt-3 leading-6"
+              >
+                ${article.description}
+              </p>
+
+
+              <button
+                class="readArticle mt-5 text-indigo-600 font-semibold"
+                data-id="${article.id}"
+              >
+                Read Article →
+              </button>
+
+            </div>
+
+          </article>
+
+        `).join("");
+
+    }
+
+
+    renderArticles();
+
+
+    /*
+    =========================================================
+    ARTICLE FILTER TRACKING
+    =========================================================
+    */
+
+    document
+      .querySelectorAll(".filter-btn")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          const category =
+            button.dataset.category;
+
+
+          renderArticles(category);
+
+
+          sendEvent(
+            "article_filter",
+            {
+              filter_category: category
+            }
+          );
+
+        });
+
+      });
+
+
+    /*
+    =========================================================
+    ARTICLE CLICK TRACKING
+    =========================================================
+    */
+
+    articleGrid.addEventListener(
+      "click",
+      event => {
+
+        const button =
+          event.target.closest(
+            ".readArticle"
+          );
+
+
+        if (!button) return;
+
+
+        const article =
+          articles.find(
+            item =>
+              item.id ===
+              Number(button.dataset.id)
+          );
+
+
+        if (!article) return;
+
+
+        sendEvent(
+          "select_content",
+          {
+
+            content_type:
+              "article",
+
+            item_id:
+              String(article.id),
+
+            item_name:
+              article.title,
+
+            content_category:
+              article.category
+
+          }
+        );
+
+
+        alert(
+          "Demo Article Opened\n\n" +
+          article.title +
+          "\n\nGA4/GTM event sent."
+        );
+
+      }
+    );
+
+
+    /*
+    =========================================================
+    NAVIGATION CLICK
+    =========================================================
+    */
+
+    document
+      .querySelectorAll(".nav-link, [data-nav]")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            sendEvent(
+              "navigation_click",
+              {
+
+                link_text:
+                  link.textContent.trim(),
+
+                destination:
+                  link.getAttribute("href")
+
+              }
+            );
+
+          }
+        );
+
+      });
+
+
+    /*
+    =========================================================
+    HERO CTA
+    =========================================================
+    */
+
+    document
+      .getElementById("heroSubscribeBtn")
+      .addEventListener(
+        "click",
+        () => {
+
+          sendEvent(
+            "cta_click",
+            {
+
+              cta_name:
+                "hero_subscribe",
+
+              cta_location:
+                "hero"
+
+            }
+          );
+
+
+          document
+            .getElementById("newsletter")
+            .scrollIntoView({
+              behavior: "smooth"
+            });
+
+        }
+      );
+
+
+    /*
+    =========================================================
+    NEWSLETTER FORM
+    =========================================================
+    */
+
+    document
+      .getElementById("newsletterForm")
+      .addEventListener(
+        "submit",
+        event => {
+
+          event.preventDefault();
+
+
+          sendEvent(
+            "generate_lead",
+            {
+
+              form_name:
+                "newsletter",
+
+              lead_type:
+                "newsletter_signup"
+
+            }
+          );
+
+
+          sendEvent(
+            "newsletter_signup",
+            {
+
+              signup_method:
+                "website_form"
+
+            }
+          );
+
+
+          document
+            .getElementById(
+              "newsletterMessage"
+            )
+            .classList.remove(
+              "hidden"
+            );
+
+
+          event.target.reset();
+
+        }
+      );
+
+
+    /*
+    =========================================================
+    CONTACT FORM
+    =========================================================
+    */
+
+    document
+      .getElementById("contactForm")
+      .addEventListener(
+        "submit",
+        event => {
+
+          event.preventDefault();
+
+
+          sendEvent(
+            "generate_lead",
+            {
+
+              form_name:
+                "contact",
+
+              lead_type:
+                "contact_form"
+
+            }
+          );
+
+
+          sendEvent(
+            "contact_form_submit",
+            {
+
+              form_name:
+                "contact"
+
+            }
+          );
+
+
+          document
+            .getElementById(
+              "contactMessage"
+            )
+            .classList.remove(
+              "hidden"
+            );
+
+
+          event.target.reset();
+
+        }
+      );
+
+
+    /*
+    =========================================================
+    DOWNLOAD TRACKING
+    =========================================================
+    */
+
+    document
+      .getElementById("downloadGuide")
+      .addEventListener(
+        "click",
+        () => {
+
+          sendEvent(
+            "file_download",
+            {
+
+              file_name:
+                "ga4-gtm-practice-guide.txt",
+
+              file_extension:
+                "txt"
+
+            }
+          );
+
+
+          const guide = `
+
+GA4 & GTM PRACTICE GUIDE
+
+Events:
+
+1. navigation_click
+2. select_content
+3. article_filter
+4. cta_click
+5. generate_lead
+6. newsletter_signup
+7. contact_form_submit
+8. file_download
+9. search
+10. scroll_depth
+
+Practice these events in GTM and GA4.
+
+          `;
+
+
+          const blob =
+            new Blob(
+              [guide],
+              {
+                type:
+                  "text/plain"
+              }
+            );
+
+
+          const url =
+            URL.createObjectURL(
+              blob
+            );
+
+
+          const a =
+            document.createElement(
+              "a"
+            );
+
+
+          a.href = url;
+
+          a.download =
+            "ga4-gtm-practice-guide.txt";
+
+          a.click();
+
+
+          URL.revokeObjectURL(url);
+
+        }
+      );
+
+
+    /*
+    =========================================================
+    INTERNAL SEARCH
+    =========================================================
+
+    Press "/" on keyboard
+    */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "/" &&
+          document.activeElement.tagName !== "INPUT"
+        ) {
+
+          event.preventDefault();
+
+
+          const searchTerm =
+            prompt(
+              "What do you want to search?"
+            );
+
+
+          if (!searchTerm) return;
+
+
+          sendEvent(
+            "search",
+            {
+
+              search_term:
+                searchTerm
+
+            }
+          );
+
+
+          alert(
+            "Search Event Sent\n\n" +
+            "search_term = " +
+            searchTerm
+          );
+
+        }
+
+      }
+    );
+
+
+    /*
+    =========================================================
+    SCROLL DEPTH TRACKING
+    =========================================================
+    */
+
+    let scroll50 = false;
+    let scroll90 = false;
+
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        const scrollHeight =
+          document.documentElement
+            .scrollHeight -
+          window.innerHeight;
+
+
+        if (scrollHeight <= 0) return;
+
+
+        const percentage =
+          Math.round(
+            (
+              window.scrollY /
+              scrollHeight
+            ) * 100
+          );
+
+
+        if (
+          percentage >= 50 &&
+          !scroll50
+        ) {
+
+          scroll50 = true;
+
+
+          sendEvent(
+            "scroll_depth",
+            {
+              percent_scrolled: 50
+            }
+          );
+
+        }
+
+
+        if (
+          percentage >= 90 &&
+          !scroll90
+        ) {
+
+          scroll90 = true;
+
+
+          sendEvent(
+            "scroll_depth",
+            {
+              percent_scrolled: 90
+            }
+          );
+
+        }
+
+      }
+    );
+
+
+    /*
+    =========================================================
+    MOBILE MENU
+    =========================================================
+    */
+
+    document
+      .getElementById("mobileMenuBtn")
+      .addEventListener(
+        "click",
+        () => {
+
+          document
+            .getElementById("mobileMenu")
+            .classList.toggle(
+              "hidden"
+            );
+
+
+          sendEvent(
+            "mobile_menu_toggle"
+          );
+
+        }
+      );
+
+
+    /*
+    =========================================================
+    DEBUG
+    =========================================================
+
+    Browser Console-এ লিখুন:
+
+    dataLayer
+
+    অথবা:
+
+    console.log(dataLayer)
+
+    */
+
+    console.log(
+      "GA4/GTM Practice Website Loaded"
+    );
+
+    console.log(
+      "Type dataLayer in Console to inspect events."
+    );
+
+  </script>
+
+
+<!-- google tag menagar -->
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVZ67Q6Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+</body>
+</html>
